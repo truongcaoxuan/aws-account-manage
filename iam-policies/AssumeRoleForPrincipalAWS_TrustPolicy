@@ -8,6 +8,10 @@
                 "arn:aws:iam::SOURCE-ACCOUNT-ID:user/SOURCE-USERNAME"
             ]
         },
-        "Action": "sts:AssumeRole"
+        "Action": "sts:AssumeRole",
+        "Condition": {
+            "DateGreaterThan": {"aws:CurrentTime": "2017-07-01T00:00:00Z"},
+            "DateLessThan": {"aws:CurrentTime": "2017-12-31T23:59:59Z"}
+        }
     }
 }
