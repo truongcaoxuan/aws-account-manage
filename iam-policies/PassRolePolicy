@@ -21,7 +21,21 @@
                 "arn:aws:iam::111122223333:role/AmazonEKSWorkerNodeRole"
             ],
             "Condition": {
-                "StringEquals": {"iam:PassedToService": "ec2.amazonaws.com"},
+                "StringEquals": {
+                    "iam:PassedToService": [
+                        "ec2.amazonaws.com",
+                        "eks.amazonaws.com",
+                        "lambda.amazonaws.com",
+                        "apigateway.amazonaws.com",
+                        "elasticbeanstalk.amazonaws.com",
+                        "rds.amazonaws.com",
+                        "ssm.amazonaws.com",
+                        "config.amazonaws.com",
+                        "cloudformation.amazonaws.com",
+                        "autoscaling.amazonaws.com",
+                        "cloudtrail.amazonaws.com"
+                        ]
+                },
                 "ArnLike": {
                     "iam:AssociatedResourceARN": [
                         "arn:aws:ec2:us-east-1:111122223333:instance/*",
