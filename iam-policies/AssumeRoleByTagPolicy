@@ -17,6 +17,13 @@
                 "HR",
                 "CS"
               ]
+            },
+          "ForAllValues:StringEquals": 
+            {
+              "aws:TagKeys": [
+                "environment",
+                "cost-center"
+              ]
             }
         }
     }
