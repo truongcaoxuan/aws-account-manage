@@ -6,8 +6,7 @@
             "Effect": "Allow",
             "Action": ["iam:ListRoles"],
             "Resource": "*"
-        },
-        
+        },   
         {
             "Sid": "AllowUserToPassRole",
             "Effect": "Allow",
