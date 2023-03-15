@@ -1,0 +1,35 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUserToListRoles",
+            "Effect": "Allow",
+            "Action": ["iam:ListRoles"],
+            "Resource": "*"
+        },
+        
+        {
+            "Sid": "AllowUserToPassRole",
+            "Effect": "Allow",
+            "Action": [ 
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::111122223333:role/eksClusterRole",
+                "arn:aws:iam::111122223333:role/AmazonEKSRole",
+                "arn:aws:iam::111122223333:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS",
+                "arn:aws:iam::111122223333:role/AmazonEKSWorkerNodeRole"
+            ],
+            "Condition": {
+                "StringEquals": {"iam:PassedToService": "ec2.amazonaws.com"},
+                "ArnLike": {
+                    "iam:AssociatedResourceARN": [
+                        "arn:aws:ec2:us-east-1:111122223333:instance/*",
+                        "arn:aws:ec2:us-west-1:111122223333:instance/*"
+                    ]
+                }
+            }
+        }
+    ]
+}
