@@ -2,10 +2,12 @@
     "Version": "2012-10-17",
     "Statement": {
         "Effect": "Allow",
-        "Principal": {"AWS": [
-            "arn:aws:iam::SOURCE-ACCOUNT-ID:root",
-            "arn:aws:iam::SOURCE-ACCOUNT-ID:user/SOURCE-USERNAME"
-        ]},
+        "Principal": {
+            "AWS": [
+                "arn:aws:iam::SOURCE-ACCOUNT-ID:root",
+                "arn:aws:iam::SOURCE-ACCOUNT-ID:user/SOURCE-USERNAME"
+            ]
+        },
         "Action": "sts:AssumeRole"
     }
 }
