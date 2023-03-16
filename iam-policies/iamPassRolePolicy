@@ -12,7 +12,8 @@
             "Effect": "Allow",
             "Action": [ 
                 "iam:GetRole",
-                "iam:PassRole"
+                "iam:PassRole",
+                "iam:ListAttachedRolePolicies"
             ],
             "Resource": [
                 "arn:aws:iam::111122223333:role/eksClusterRole",
