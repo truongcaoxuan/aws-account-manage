@@ -9,7 +9,7 @@
                 "iam:TagOpenIDConnectProvider"
 
             ],
-            "Resource": "arn:aws:iam::795568980647:oidc-provider/*"
+            "Resource": "arn:aws:iam::111122223333:oidc-provider/*"
         }
     ]
 }
