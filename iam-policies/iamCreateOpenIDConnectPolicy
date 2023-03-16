@@ -6,7 +6,9 @@
             "Effect": "Allow",
             "Action": [
                 "iam:CreateOpenIDConnectProvider",
-                "iam:TagOpenIDConnectProvider"
+                "iam:GetOpenIDConnectProvider",
+                "iam:TagOpenIDConnectProvider",
+                "iam:DeleteOpenIDConnectProvider"
 
             ],
             "Resource": "arn:aws:iam::111122223333:oidc-provider/*"
