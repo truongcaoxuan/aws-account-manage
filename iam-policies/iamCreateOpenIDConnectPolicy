@@ -1,0 +1,15 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUserToCreateOpenIDConnectProvider",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateOpenIDConnectProvider",
+                "iam:TagOpenIDConnectProvider"
+
+            ],
+            "Resource": "arn:aws:iam::795568980647:oidc-provider/*"
+        }
+    ]
+}
